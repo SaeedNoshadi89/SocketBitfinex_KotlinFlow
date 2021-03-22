@@ -56,9 +56,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation(AppDeps.stdlib)
-
     implementation(AppDeps.appCompat)
     implementation(AppDeps.core)
     implementation(AppDeps.constraintlayout)
@@ -74,7 +74,6 @@ dependencies {
 
     implementation(AppDeps.rxAndroid)
     implementation(AppDeps.rxKotlin)
-//    implementation(AppDeps.rxJava)
 
     implementation(AppDeps.scarlet)
     implementation(AppDeps.scarletOkHttp)
