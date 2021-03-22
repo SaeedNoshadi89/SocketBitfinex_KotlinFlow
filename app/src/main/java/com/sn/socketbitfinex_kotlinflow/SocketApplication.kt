@@ -8,7 +8,6 @@ import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 import timber.log.Timber.DebugTree
 
-
 @HiltAndroidApp
 class SocketApplication: MultiDexApplication() {
     override fun onCreate() {
