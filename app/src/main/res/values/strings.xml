@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">SocketBitfinex_KotlinFlow</string>
+    <string name="app_name">Scarlet Socket (Kotlin Flow)</string>
+    <string name="btc_usd_title">"BTC/USD</string>
+    <string name="order_book_title">"Order Book</string>
+    <string name="bid_label">"Bid</string>
+    <string name="ask_label">"Ask</string>
+    <string name="amount_text">"amount</string>
+    <string name="price_text">"price</string>
+    <string name="title_dynamicfeature">Module Title</string>
+    <string name="title_dynamicfeature2">Module Title</string>
 </resources>
