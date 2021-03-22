@@ -1,11 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.sn.socketbitfinex_kotlinflow"
@@ -13,8 +14,25 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
     }
 
     buildTypes {
@@ -23,23 +41,67 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
     }
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":data"))
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(AppDeps.stdlib)
+    implementation(AppDeps.appCompat)
+    implementation(AppDeps.core)
+    implementation(AppDeps.constraintlayout)
+    implementation(AppDeps.material)
+    implementation(AppDeps.lifecycleViewModel)
+    implementation(AppDeps.lifecycleLiveData)
+    implementation(AppDeps.lifecycleRuntime)
+    implementation(AppDeps.coroutinesAndroid)
+    implementation(AppDeps.coroutinesCore)
+    implementation(AppDeps.fragmentktx)
+    implementation(AppDeps.okhttp3)
+    implementation(AppDeps.loggingInterceptor)
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation(AppDeps.rxAndroid)
+    implementation(AppDeps.rxKotlin)
+
+    implementation(AppDeps.scarlet)
+    implementation(AppDeps.scarletOkHttp)
+    implementation(AppDeps.scarletLifecycle)
+    implementation(AppDeps.scarletAdapterRxJava)
+    implementation(AppDeps.scarletAdapterMoshi)
+    implementation(AppDeps.scarletAdapterCoroutines)
+    implementation(AppDeps.moshi)
+    implementation(AppDeps.moshiCodegen)
+
+    implementation(AppDeps.timber)
+    implementation(AppDeps.hilt)
+    kapt(AppDeps.hiltAndroidCompiler)
+    implementation(AppDeps.hiltLifecycleViewModel)
+    kapt(AppDeps.hiltCompiler)
+
+    implementation(AppDeps.multidex)
+
+    testImplementation(AppDeps.junit)
+    testImplementation(AppDeps.testCore)
+    testImplementation(AppDeps.coreTesting)
+    testImplementation(AppDeps.mockitoCore)
+    testImplementation(AppDeps.mockitoInline)
+    testImplementation(AppDeps.mockitoKotlin)
+
+    androidTestImplementation(AppDeps.testRole)
+    androidTestImplementation(AppDeps.testRunner)
+    androidTestImplementation(AppDeps.extJunit)
+    androidTestImplementation(AppDeps.espressoCore)
 }

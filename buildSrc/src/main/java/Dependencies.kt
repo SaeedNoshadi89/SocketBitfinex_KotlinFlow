@@ -1,0 +1,117 @@
+object Versions{
+    const val kotlinVersion = "1.4.31"
+    const val appcompatVersion = "1.1.0"
+    const val ktxVersion = "1.5.0-beta03"
+    const val constraintLayoutVersion = "2.0.4"
+    const val materialVersion = "1.3.0"
+    const val lifecycleVersion = "2.3.0"
+    const val okhtttpVersion = "4.9.0"
+    const val rxAndroidVersion = "2.1.1"
+    const val rxKotlinVersion = "2.4.0"
+    const val scarletVersion = "0.1.11"
+    const val moshiVersion = "1.11.0"
+    const val timberVersion = "4.7.1"
+    const val junitVersion = "4.13.2"
+    const val androidxTestVersion = "1.3.0"
+    const val coreTestingVersion = "2.1.0"
+    const val mockitoVersion = "3.6.0"
+    const val mockitoKotlinVersion = "2.2.0"
+    const val testJunitVersion = "1.1.2"
+    const val espressoVersion = "3.3.0"
+    const val coroutinesVersion = "1.4.2"
+    const val fragmentKtxVersion = "1.3.1"
+    const val hiltVersion = "2.33-beta"
+    const val hiltLifecycleViewModelVersion = "1.0.0-alpha03"
+    const val hiltCompilerVersion = "1.0.0-beta01"
+    const val multidexVersion = "1.0.3"
+}
+
+object AppDeps{
+    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appcompatVersion}"
+    const val core = "androidx.core:core-ktx:${Versions.ktxVersion}"
+    const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+    const val material = "com.google.android.material:material:${Versions.materialVersion}"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleVersion}"
+    const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}"
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
+    const val fragmentktx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtxVersion}"
+    const val okhttp3 = "com.squareup.okhttp3:okhttp:${Versions.okhtttpVersion}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhtttpVersion}"
+
+    const val rxAndroid= "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroidVersion}"
+    const val rxKotlin= "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlinVersion}"
+
+    const val multidex = "com.android.support:multidex:${Versions.multidexVersion}"
+    const val scarlet = "com.tinder.scarlet:scarlet:${Versions.scarletVersion}"
+    const val scarletOkHttp = "com.tinder.scarlet:websocket-okhttp:${Versions.scarletVersion}"
+    const val scarletLifecycle = "com.tinder.scarlet:lifecycle-android:${Versions.scarletVersion}"
+    const val scarletAdapterRxJava = "com.tinder.scarlet:stream-adapter-rxjava2:${Versions.scarletVersion}"
+    const val scarletAdapterMoshi = "com.tinder.scarlet:message-adapter-moshi:${Versions.scarletVersion}"
+    const val scarletAdapterCoroutines = "com.tinder.scarlet:stream-adapter-coroutines:${Versions.scarletVersion}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
+
+    const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
+
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+    const val hiltLifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltLifecycleViewModelVersion}"
+    const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltCompilerVersion}"
+
+    const val junit = "junit:junit:${Versions.junitVersion}"
+    const val testCore = "androidx.test:core:${Versions.androidxTestVersion}"
+    const val coreTesting = "androidx.arch.core:core-testing:${Versions.coreTestingVersion}"
+    const val mockitoCore = "org.mockito:mockito-core:${Versions.mockitoVersion}"
+    const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoVersion}"
+    const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlinVersion}"
+
+    const val testRole = "androidx.test:rules:${Versions.androidxTestVersion}"
+    const val testRunner = "androidx.test:runner:${Versions.androidxTestVersion}"
+    const val extJunit = "androidx.test.ext:junit:${Versions.testJunitVersion}"
+    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoVersion}"
+}
+
+object DomainDeps{
+    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
+}
+
+object DataDeps{
+    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
+    const val okhttp3 = "com.squareup.okhttp3:okhttp:${Versions.okhtttpVersion}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhtttpVersion}"
+    const val multidex = "com.android.support:multidex:${Versions.multidexVersion}"
+    const val scarlet = "com.tinder.scarlet:scarlet:${Versions.scarletVersion}"
+    const val scarletOkHttp = "com.tinder.scarlet:websocket-okhttp:${Versions.scarletVersion}"
+    const val scarletLifecycle = "com.tinder.scarlet:lifecycle-android:${Versions.scarletVersion}"
+    const val scarletAdapterMoshi = "com.tinder.scarlet:message-adapter-moshi:${Versions.scarletVersion}"
+    const val scarletAdapterCoroutines = "com.tinder.scarlet:stream-adapter-coroutines:${Versions.scarletVersion}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
+
+    const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
+
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+    const val hiltLifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltLifecycleViewModelVersion}"
+    const val hiltCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltCompilerVersion}"
+
+    const val junit = "junit:junit:${Versions.junitVersion}"
+    const val testCore = "androidx.test:core:${Versions.androidxTestVersion}"
+    const val coreTesting = "androidx.arch.core:core-testing:${Versions.coreTestingVersion}"
+    const val mockitoCore = "org.mockito:mockito-core:${Versions.mockitoVersion}"
+    const val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoVersion}"
+    const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlinVersion}"
+
+    const val testRole = "androidx.test:rules:${Versions.androidxTestVersion}"
+    const val testRunner = "androidx.test:runner:${Versions.androidxTestVersion}"
+    const val extJunit = "androidx.test.ext:junit:${Versions.testJunitVersion}"
+    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoVersion}"
+
+}
